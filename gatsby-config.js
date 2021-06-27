@@ -18,5 +18,7 @@ module.exports = {
       },
       __key: "pages",
     },
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-netlify-cms"
   ],
 };

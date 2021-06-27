@@ -1,4 +1,5 @@
 import * as React from "react"
+import styled from "styled-components";
 
 // styles
 const pageStyles = {
@@ -62,21 +63,21 @@ const docLink = {
   color: "#8954A8",
 }
 
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
+const Badge = styled.span`
+  color: #fff;
+  background-color: #088413;
+  border: 1px solid #088413;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  padding: 4px 6px;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  margin-left: 10px;
+  line-height: 5pt;
+`
 
 // data
 const links = [
@@ -131,7 +132,7 @@ const IndexPage = () => {
     <main style={pageStyles}>
       <title>Home Page</title>
       <h1 style={headingStyles}>
-        Congratulations
+        Congratulations!
         <br />
         <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
         <span role="img" aria-label="Party popper emojis">
@@ -164,9 +165,9 @@ const IndexPage = () => {
                 {link.text}
               </a>
               {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
+                <Badge aria-label="New Badge">
                   NEW!
-                </span>
+                </Badge>
               )}
               <p style={descriptionStyle}>{link.description}</p>
             </span>
